@@ -84,6 +84,7 @@ csharp_new_line_before_catch = true
 csharp_new_line_before_finally = true
 csharp_new_line_before_members_in_object_initializers = true
 csharp_new_line_before_members_in_anonymous_types = true
+csharp_new_line_between_query_expression_clauses = true
 
 # ReSharper Arrangement of initializers - Wrap object and collection initializer (C#)
 resharper_wrap_object_and_collection_initializer_style = chop_always
