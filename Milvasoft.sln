@@ -108,6 +108,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "Integra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Milvasoft.IntegrationTests.Client", "test\Milvasoft.IntegrationTests\Milvasoft.IntegrationTests.Client\Milvasoft.IntegrationTests.Client.csproj", "{1513993A-3CA4-4978-98F6-E0DDC643B298}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "practice", "practice", "{6D2C167B-3C56-4C3E-9D15-168601651320}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "practice\ConsoleApp1\ConsoleApp1.csproj", "{F177F506-51A5-4520-BD5B-D6D3DAB9CF8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -238,6 +242,10 @@ Global
 		{1513993A-3CA4-4978-98F6-E0DDC643B298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1513993A-3CA4-4978-98F6-E0DDC643B298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1513993A-3CA4-4978-98F6-E0DDC643B298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F177F506-51A5-4520-BD5B-D6D3DAB9CF8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F177F506-51A5-4520-BD5B-D6D3DAB9CF8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F177F506-51A5-4520-BD5B-D6D3DAB9CF8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F177F506-51A5-4520-BD5B-D6D3DAB9CF8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -289,6 +297,7 @@ Global
 		{F3DEC992-902F-4F79-953D-88213C6BA0B0} = {9F01CC9F-2AF7-4343-8FA7-404F302957F7}
 		{9F01CC9F-2AF7-4343-8FA7-404F302957F7} = {FE2610F1-D96D-4DDD-B5ED-5A9E16F15A2C}
 		{1513993A-3CA4-4978-98F6-E0DDC643B298} = {9F01CC9F-2AF7-4343-8FA7-404F302957F7}
+		{F177F506-51A5-4520-BD5B-D6D3DAB9CF8A} = {6D2C167B-3C56-4C3E-9D15-168601651320}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E552B285-92CB-491D-8ACD-91C933292699}
