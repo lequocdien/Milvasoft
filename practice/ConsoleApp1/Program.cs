@@ -9,7 +9,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<string> lst = new();
-        Console.WriteLine(lst.IsNullOrEmpty());
+        List<int> lst = new List<int>();
+        Console.WriteLine(nameof(lst));
     }
 }
