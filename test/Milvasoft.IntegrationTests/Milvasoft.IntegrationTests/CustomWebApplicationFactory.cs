@@ -22,14 +22,15 @@ public class DatabaseTestCollection : ICollectionFixture<CustomWebApplicationFac
 public class CustomWebApplicationFactory : WebApplicationFactory<Program>, IAsyncLifetime
 {
     private Func<IApplicationBuilder, IApplicationBuilder> _appBuilderAction = (app) => app;
+
     private readonly PostgreSqlContainer _dbContainer = new PostgreSqlBuilder().WithImage("postgres:latest")
-                                                                               .WithDatabase("db")
-                                                                               .WithUsername("postgres")
-                                                                               .WithPassword("postgres")
-                                                                               .WithWaitStrategy(Wait.ForUnixContainer().UntilCommandIsCompleted("pg_isready"))
-                                                                               .WithCleanUp(true)
-                                                                               .WithPortBinding(5343, 5342)
-                                                                               .Build();
+        .WithDatabase("db")
+        .WithUsername("postgres")
+        .WithPassword("postgres")
+        .WithWaitStrategy(Wait.ForUnixContainer().UntilCommandIsCompleted("pg_isready"))
+        .WithCleanUp(true)
+        .WithPortBinding(5343, 5342)
+        .Build();
 
     private Respawner _respawner;
     private DbConnection _connection;
@@ -39,13 +40,7 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>, IAsyn
 
     protected override IHostBuilder CreateHostBuilder()
         => Host.CreateDefaultBuilder()
-               .ConfigureWebHostDefaults(webBuilder =>
-               {
-                   webBuilder.Configure(app =>
-                   {
-                       _appBuilderAction.Invoke(app);
-                   });
-               });
+            .ConfigureWebHostDefaults(webBuilder => { webBuilder.Configure(app => { _appBuilderAction.Invoke(app); }); });
 
     public async Task InitializeAsync()
     {
@@ -69,10 +64,7 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>, IAsyn
             services.RemoveAll<DbContextOptions<SomeMilvaDbContextFixture>>();
             services.RemoveAll<SomeMilvaDbContextFixture>();
 
-            services.AddDbContext<SomeMilvaDbContextFixture>(options =>
-            {
-                options.UseNpgsql(_dbContainer.GetConnectionString());
-            });
+            services.AddDbContext<SomeMilvaDbContextFixture>(options => { options.UseNpgsql(_dbContainer.GetConnectionString()); });
         });
     }
 

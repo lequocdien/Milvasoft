@@ -15,13 +15,14 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        string path1 = Directory.GetCurrentDirectory();
         return View();
     }
 
     public IActionResult Privacy()
     {
         return View();
-    }
+    }                                                                                                                   
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
