@@ -1,6 +1,6 @@
 # EditorConfig is awesome:http://EditorConfig.org
-# ReSharper; https://www.jetbrains.com/help/resharper/Using_EditorConfig.html
 # Preference: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options
+# ReSharper; https://www.jetbrains.com/help/resharper/Using_EditorConfig.html
 
 # top-most EditorConfig file
 root = true
@@ -96,8 +96,9 @@ csharp_new_line_before_members_in_object_initializers = true
 csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
 
-# ReSharper Arrangement of initializers - Wrap object and collection initializer (C#)
+# ReSharper properties
 resharper_wrap_object_and_collection_initializer_style = chop_always
+resharper_place_simple_anonymousmethod_on_single_line = false
 
 # Shell scripts
 [*.sh]
